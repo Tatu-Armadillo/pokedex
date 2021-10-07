@@ -1,77 +1,42 @@
 package pokemons;
 
+import java.util.List;
+
+import type.Types;
+
 public class Pokemon {
-    private Long id;
-    private String nome;
-    private Double peso;
-    private Double altura;
+    private Long idPokemon;
+    private String name;
     private Long hp;
-    private String tipo;
-    private String[] tipos;
+    private List<Types> types;
 
-    public Pokemon(Long id, String nome, Double peso, Double altura, Long hp, String[] tipos) {
-        this.id = id;
-        this.nome = nome;
-        this.peso = peso;
-        this.altura = altura;
+    public Pokemon(Long idPokemon, String name, Long hp, List<Types> types) {
+        this.idPokemon = idPokemon;
+        this.name = name;
         this.hp = hp;
-        this.tipos = tipos;
-    }
-
-    public Pokemon(Long id, String nome, Double peso, Double altura, Long hp, String tipo) {
-        this.id = id;
-        this.nome = nome;
-        this.peso = peso;
-        this.altura = altura;
-        this.hp = hp;
-        this.tipo = tipo;
-    }
-
-    public void atacar() {
-        System.out.println("atacar!!!");
+        this.types = types;
     }
 
     @Override
     public String toString() {
-        if (this.tipo != null) {
-            return "Pokemon: " + this.nome + "| Tipo " + this.tipo + "| Numero do Pokedex: " + this.id;
-        } else {
-            return "Pokemon: " + this.nome + "| Tipo " + this.tipos[0] + ", " + this.tipos[1] + "| Numero do Pokedex: "
-                    + this.id;
-        }
+            return "Pokemon: " + this.name + "| Tipo " + this.types.get(0) + ", " + this.types.get(1) + "| Numero do Pokedex: " + this.idPokemon;
     }
 
     // #region Getters and Setters
-    public Long getId() {
-        return id;
+    public Long getIdPokemon() {
+        return idPokemon;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdPokemon(Long idPokemon) {
+        this.idPokemon = idPokemon;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(Double peso) {
-        this.peso = peso;
-    }
-
-    public Double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(Double altura) {
-        this.altura = altura;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Long getHp() {
@@ -82,12 +47,12 @@ public class Pokemon {
         this.hp = hp;
     }
 
-    public String[] getTipos() {
-        return tipos;
+    public List<Types> getTypes() {
+        return types;
     }
 
-    public void setTipos(String[] tipos) {
-        this.tipos = tipos;
+    public void setTypes(List<Types> types) {
+        this.types = types;
     }
     // #endregion
 

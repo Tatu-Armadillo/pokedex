@@ -1,2 +1,4 @@
+Caso esteja usando o VSCODE é necessario habilitar as bibliotecas em JAVA PROJECTS -> Referenced Libraries -> "Adicionar a biblioteca necessaria"
 biblioteca de downloads
+
 Link de conector jdbc -> https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.26

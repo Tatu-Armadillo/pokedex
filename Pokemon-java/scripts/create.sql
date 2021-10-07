@@ -7,7 +7,6 @@ create table pokemon(
 	id_pokemon bigint primary key auto_increment,
     name varchar(100) unique not null,
     hp bigint,
-	evolution bigint,
     type bigint,
     ataque bigint
 );
