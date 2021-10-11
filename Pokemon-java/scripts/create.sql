@@ -6,7 +6,7 @@ use pokedex;
 create table pokemon(
 	id_pokemon bigint primary key auto_increment,
     name varchar(100) unique not null,
-    hp bigint,
+    hp bigint not null default 10,
     type bigint,
     ataque bigint
 );
@@ -14,7 +14,7 @@ create table pokemon(
 create table attack(
 	id_attack bigint primary key auto_increment,
     attack varchar(50) unique not null,
-    dano bigint not null,
+    base_demage bigint not null,
     required_level bigint not null,
     type bigint
 );
