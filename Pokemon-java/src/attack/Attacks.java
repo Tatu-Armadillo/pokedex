@@ -1,6 +1,6 @@
 package attack;
 
-import type.Types;
+// import type.Types;
 
 public class Attacks {
 
@@ -8,9 +8,9 @@ public class Attacks {
     private String attack;
     private Long baseDemage;
     private Long requiredLevel;
-    private Types type;
+    private Long type;
 
-    public Attacks(Long idAttack, String attack, Long baseDemage, Long requiredLevel, Types type) {
+    public Attacks(Long idAttack, String attack, Long baseDemage, Long requiredLevel, Long type) {
         this.idAttack = idAttack;
         this.attack = attack;
         this.baseDemage = baseDemage;
@@ -36,11 +36,11 @@ public class Attacks {
         this.attack = attack;
     }
 
-    public Types getType() {
+    public Long getType() {
         return type;
     }
 
-    public void setType(Types type) {
+    public void setType(Long type) {
         this.type = type;
     }
 

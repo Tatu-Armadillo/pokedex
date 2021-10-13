@@ -13,19 +13,16 @@ public class Pokemon {
     private List<Types> types;
     private List<Attacks> attacks;
 
-    public Pokemon(Long idPokemon, String name, Long hp, Long level, List<Types> types, List<Attacks> attacks) {
+    public Pokemon(Long idPokemon, String name, Long hp, Long level) {
         this.idPokemon = idPokemon;
         this.name = name;
         this.hp = hp;
         this.level = level;
-        this.types = types;
-        this.attacks = attacks;
     }
 
     @Override
     public String toString() {
-        return "Pokemon: " + this.name + "| Tipo " + this.types.get(0) + ", " + " Ataques aprendidos: "
-                + this.attacks.get(0) + "| Numero do Pokedex: " + this.idPokemon;
+        return this.name;
     }
 
     // #region Getters and Setters

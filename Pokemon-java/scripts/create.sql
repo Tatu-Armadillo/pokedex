@@ -1,14 +1,14 @@
 drop database if exists pokedex;
 create database pokedex;
-
 use pokedex;
 
 create table pokemon(
 	id_pokemon bigint primary key auto_increment,
     name varchar(100) unique not null,
     hp bigint not null default 10,
+    level bigint not null,
     type bigint,
-    ataque bigint
+    attack bigint
 );
 
 create table attack(
