@@ -8,7 +8,13 @@ create table pokemon(
     hp bigint not null default 10,
     level bigint not null,
     type bigint,
-    attack bigint
+    attack bigint,
+    region bigint
+);
+
+create table region(
+	id_region bigint primary key auto_increment,
+    nome_region varchar(15)
 );
 
 create table attack(
@@ -41,6 +47,9 @@ create table type_attack(
     fk_type2 bigint,
     fk_attack2 bigint
 );
+
+alter table pokemon add constraint fk_region_pokemon
+	foreign key (region) references type (id_region) on delete restrict;
 
 alter table type_pokemon add constraint fk_pokemon_type 
 	foreign key (fk_type) references type (id_type) on delete restrict;
