@@ -1,0 +1,6 @@
+
+*.json
+*.class
+*.jar
+*.class
+/target
